@@ -480,6 +480,13 @@ def make_sail_behave_like_swift_sail(self):
   sail_itemget_model.save_changes()
 
 
+def normal_sail_wind(self):
+  # Causes the wind direction to always change to face the direction KoRL is facing as long as the sail is out.
+  
+  # Apply the asm patch.
+  
+  patcher.apply_patch(self, "normal_sail_wind")
+
 def make_sail_behave_like_swift_sail2(self):
   # Causes the wind direction to always change to face the direction KoRL is facing as long as the sail is out.
   # Also doubles KoRL's speed.
